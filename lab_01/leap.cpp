@@ -8,18 +8,22 @@
   is a leap year according to the Gregorian calendar.
 */
 
-if (year is not divisible by 4) then (it is a common year)
-else if (year is not divisible by 100) then (it is a leap year)
-else if (year is not divisible by 400) then (it is a common year)
-else (it is a leap year)
+#include <iostream>
 
 int main() {
   std::cout << "Please enter a year: ";
   int year;
   std::cin >> year;
 
-  if (year % 4 != 0 || year %){
-    std::cout << year << " is a common year.";
-  } else if (year %)
+  if (year % 4 != 0) {
+    std::cout << year << " is a common year.\n";
+  } else if (year % 100 != 0) {
+    std::cout << year << " is a leap year.\n";
+  } else if (year % 400 != 0) {
+    std::cout << year << " is a common year.\n";
+  } else {
+    std::cout << year << " is a leap year.\n";
+  }
+
   return 0;
 }

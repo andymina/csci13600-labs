@@ -54,4 +54,6 @@ int main() {
   } else {
     std::cout << KNUCKLE_BUMP << " days.\n";
   }
+
+  return 0;
 }

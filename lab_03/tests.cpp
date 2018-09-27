@@ -1,5 +1,9 @@
 #define CATCH_CONFIG_MAIN
-#include "main.cpp"
+#include "compare.cpp"
+#include "east_storage.cpp"
+#include "min_storage.cpp"
+#include "max_storage.cpp"
+#include "reverse.cpp"
 #include "catch.hpp"
 
 TEST_CASE("Task A"){
@@ -23,7 +27,7 @@ TEST_CASE("Task C"){
 
 TEST_CASE("Task D"){
 	CHECK(reverse("9/13/2016", "09/17/2016") ==
-	"09/17/2016  575.4 ft\n09/16/2016 575.61 ft\n09/15/2016  575.75 ft\n09/14/2016  575.79 ft\n09/13/2016  575.93 ft");
+	"09/17/2016 575.4 ft\n09/16/2016 575.61 ft\n09/15/2016 575.75 ft\n09/14/2016 575.79 ft\n09/13/2016 575.93 ft");
 
 	CHECK(reverse("05/29/2016", "06/02/2016") ==
 	"06/02/2016 587.66 ft\n06/01/2016 587.81 ft\n05/31/2016 587.93 ft\n05/30/2016 588.02 ft\n05/29/2016 588.17 ft");

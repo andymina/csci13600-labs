@@ -4,7 +4,7 @@ main: main.o divisible.o prime.o next-prime.o count-primes.o twin-prime.o next-t
 	g++ -o main $(CXXFLAGS) main.o prime.o divisible.o next-prime.o count-primes.o twin-prime.o next-twin-prime.o largest-twin-prime.o
 
 main.o: main.cpp
-	g++ -o main.o $(CXXFLAGS) -c main.cpp
+	g++ -o main.o $(CXXFLAGS) main.cpp
 
 divisible.o: divisible.cpp divisible.h
 	g++ -o divisible.o $(CXXFLAGS) -c divisible.cpp

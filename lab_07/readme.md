@@ -1,0 +1,2 @@
+### Code Review
+Most of my time was spent trying to understand the other person's code. The code was split between multiple files so I was constantly jumping between files. The code also required user input, which I was unaware of. This lead me to believe the main function didn't work at a glance. I wasn't able to find the time to try and add onto the existing as most of my time was spent trying to understand it.

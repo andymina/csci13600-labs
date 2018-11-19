@@ -16,23 +16,19 @@ TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie){
 }
 
 bool timeOverlap(TimeSlot ts1, TimeSlot ts2){
-	Time first = ts1.startTime;
-	Time second = ts2.startTime;
 	TimeSlot earlier;
 	TimeSlot later;
-
-	int firstMin = minutesSinceMidnight(first);
-	int secondMin = minutesSinceMidnight(second);
-
-	if (firstMin < secondMin){
+	if (minutesUntil(ts1.startTime, ts2.startTime) > 0){
 		earlier = ts1;
 		later = ts2;
-	} else if (secondMin < firstMin){
+	} else {
 		earlier = ts2;
 		later = ts1;
 	}
 
-	if ((toMinutes(earlier.startTime) - toMinutes(later.startTime)) > toMinutes(earlier.startTime)){
+	int interval = toMinutes(later.startTime) - toMinutes(earlier.startTime);
+
+	if (ts1.movie.duration > interval){
 		return true;
 	} else {
 		return false;

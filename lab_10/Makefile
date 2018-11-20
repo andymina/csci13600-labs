@@ -15,8 +15,8 @@ movie.o: movie.cpp movie.h
 timeSlot.o: timeSlot.cpp time.h movie.h timeSlot.h
 	g++ -c timeSlot.cpp
 
-tests: tests.o time.o
-	g++ -o tests tests.o time.o
+tests: tests.o timeSlot.o time.o movie.o
+	g++ -o tests tests.o timeSlot.o time.o movie.o
 
 tests.o: tests.cpp
 	g++ -c $(CXXFLAGS) tests.cpp
